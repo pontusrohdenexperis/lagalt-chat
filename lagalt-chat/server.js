@@ -4,7 +4,7 @@ const http = require("http");
 
 const { addUser, removeUser, removeUserByNameAndRoom, getUser, getUserByNameAndRoom, getUsersInRoom } = require("./users");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || "https://lagalt-chat.herokuapp.com/";
 
 const app = express();
 const server = http.createServer(app);
