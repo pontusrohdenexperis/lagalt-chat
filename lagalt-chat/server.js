@@ -11,7 +11,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
-    origin: "https://lagalt-frontend-gbg.herokuapp.com/",
+    origin: "https://lagalt-frontend-gbg.herokuapp.com",
     methods: ["GET", "POST"],
   },
 });
