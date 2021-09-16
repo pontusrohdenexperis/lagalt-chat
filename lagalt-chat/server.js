@@ -5,13 +5,12 @@ const cors = require('cors');
 
 const { addUser, removeUser, removeUserByNameAndRoom, getUser, getUserByNameAndRoom, getUsersInRoom } = require("./users");
 
-const PORT = process.env.PORT || "https://lagalt-chat.herokuapp.com/";
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
-    AccessControlAllowOrigin: "https://lagalt-frontend-gbg.herokuapp.com/",
     origin: "https://lagalt-frontend-gbg.herokuapp.com/",
     methods: ["GET", "POST"],
   },
